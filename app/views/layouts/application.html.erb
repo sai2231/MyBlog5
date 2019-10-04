@@ -10,8 +10,16 @@
   </head>
 
   <body>
-  <%= link_to "Home",root_path %>
-  <%= link_to "New Post", new_post_path %> 
-    <%= yield %>
-  </body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand"><%= link_to "MyBlog",root_path, class: "btn btn-default" %></a>
+        </div>  
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "New Post", new_post_path, class: "btn btn-default" %></li>
+        </ul> 
+      </div>   
+    </nav>        
+     <%= yield %>
+ </body>
 </html>

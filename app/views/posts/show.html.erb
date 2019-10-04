@@ -11,6 +11,6 @@
   	<%= @post.body %>
   </p>
   
-  <%= link_to "Back", root_path %>
-  <%= link_to "Edit", edit_post_path %>	
-  <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?"} %>
+  <%= link_to "Back", root_path, class: "btn btn-default" %>
+  <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>	
+  <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default" %>
