@@ -12,14 +12,15 @@
   <body>
     <nav class="navbar navbar-default">
       <div class="container">
-        <div class="navbar-header">
           <a class="navbar-brand"><%= link_to "MyBlog",root_path, class: "btn btn-default" %></a>
-        </div>  
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "New Post", new_post_path, class: "btn btn-default" %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
         </ul> 
       </div>   
-    </nav>        
-     <%= yield %>
+    </nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>      
+   <%= yield %>
  </body>
 </html>
